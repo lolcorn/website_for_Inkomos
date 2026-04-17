@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар - Инкомос</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo"><a href="index.html"><strong>ИНКОМОС</strong></a></div>
+                <div class="cart-widget" onclick="location.href='cart.html'">
+                    <span>🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="cart.html" class="active">Корзина</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container product-container">
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> / 
+            <a href="catalog.html">Каталог</a> / 
+            <span id="breadcrumb-current">Товар</span>
+        </div>
+
+        <div id="product-loading" style="text-align:center; padding:50px;">Загрузка...</div>
+
+        <div id="product-detail" class="hidden">
+            <div class="product-grid">
+                <div class="product-gallery">
+                    <img id="product-img" src="" alt="" class="main-img">
+                </div>
+                <div class="product-info-full">
+                    <div class="product-brand" id="product-brand"></div>
+                    <h1 id="product-title" class="product-title"></h1>
+                    <div class="product-sku">Артикул: <span id="product-sku"></span></div>
+                    
+                    <div class="product-availability">
+                        <span class="badge-stock">В наличии</span>
+                        <span>Гарантия производителя</span>
+                    </div>
+
+                    <div class="product-price-box">
+                        <span class="price-current" id="product-price"></span>
+                        <span class="price-old" id="product-old-price"></span>
+                    </div>
+
+                    <div class="product-actions-box">
+                        <div class="qty-selector">
+                            <button onclick="changeQty(-1)">-</button>
+                            <input type="number" id="product-qty" value="1" min="1">
+                            <button onclick="changeQty(1)">+</button>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCartFromProduct()">В корзину</button>
+                    </div>
+
+                    <div class="product-desc">
+                        <h3>Описание</h3>
+                        <p id="product-description">Надежное промышленное оборудование от проверенных поставщиков (ЭТМ, RS24).</p>
+                    </div>
+                    
+                    <div class="specs">
+                        <h3>Характеристики</h3>
+                        <table class="specs-table">
+                            <tr><td>Бренд</td><td id="spec-brand"></td></tr>
+                            <tr><td>Категория</td><td id="spec-category"></td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>
