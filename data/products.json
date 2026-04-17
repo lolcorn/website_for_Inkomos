@@ -1,0 +1,21 @@
+{
+  "categories": [
+    {"id":"nku","name":"НКУ","icon":"🔌"},
+    {"id":"avtomaty","name":"Автоматические выключатели","icon":"⚡"},
+    {"id":"uzo","name":"УЗО","icon":"🛡️"},
+    {"id":"kontaktory","name":"Контакторы и пускатели","icon":"🔋"}
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Автоматический выключатель ABB SH203 C16",
+      "brand": "ABB",
+      "sku": "2CDS253001R0164",
+      "price": 850,
+      "oldPrice": 990,
+      "category": "avtomaty",
+      "image": "https://via.placeholder.com/300x220?text=ABB+C16",
+      "badge": "Хит"
+    }
+  ]
+}
