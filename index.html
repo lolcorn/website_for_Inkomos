@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инкомос - Электротехника и промышленное оборудование</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 50'%3E%3Ccircle cx='25' cy='25' r='20' fill='%234CAF50'/%3E%3Cpath d='M15 25 Q25 15 35 25 Q25 35 15 25' fill='white'/%3E%3Ctext x='55' y='32' font-family='Arial' font-size='24' font-weight='bold' fill='%23333'%3EИНКОМОС%3C/text%3E%3C/svg%3E" alt="Инкомос">
+                    <div class="city-selector">
+                        <span class="label">Ваш город:</span>
+                        <select id="citySelect">
+                            <option>Чехов</option>
+                            <option>Москва</option>
+                            <option>Подольск</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="header-center">
+                    <p class="slogan">Наш новый взгляд на интернет-магазин</p>
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск по каталогу магазина..." id="searchInput">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="phones">
+                        <a href="tel:+78005556494">+7 (800) 555-64-94</a>
+                        <a href="tel:+74957832197">+7 (495) 783-21-97</a>
+                    </div>
+                    <button class="callback-btn">Заказать звонок</button>
+                    <div class="cart-widget" onclick="location.href='cart.html'">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                        <div class="cart-info">
+                            <span class="empty">В корзине пока пусто</span>
+                            <button class="checkout-btn">Оформить заказ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <a href="index.html" class="active">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="brands.html">Бренды</a>
+                <a href="delivery.html">Доставка</a>
+                <a href="payment.html">Оплата</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="about.html">О компании</a>
+                <div class="nav-right">
+                    <a href="favorites.html">♡ Избранное <span>0</span></a>
+                    <a href="compare.html">📊 Сравнение <span>0</span></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="main-layout">
+                <!-- Sidebar Catalog -->
+                <aside class="sidebar">
+                    <div class="catalog-header">
+                        <h2>Каталог товаров</h2>
+                        <button class="catalog-toggle">☰</button>
+                    </div>
+                    <div class="search-mini">
+                        <input type="text" placeholder="Поиск..." id="sidebarSearch">
+                    </div>
+                    <ul class="categories-list" id="categoriesList">
+                        <!-- Заполняется через JS -->
+                    </ul>
+                </aside>
+
+                <!-- Content Area -->
+                <div class="content">
+                    <div class="breadcrumb">
+                        <a href="index.html">Главная</a> / <span>Главная страница</span>
+                    </div>
+
+                    <!-- Hero Slider -->
+                    <section class="hero-slider">
+                        <div class="slider-container">
+                            <div class="slide active">
+                                <div class="slide-content">
+                                    <h1>Электрощитки<br>для квартиры и дома</h1>
+                                    <p>Сделайте свой дом безопасным!<br>Вперед к обновлениям!</p>
+                                    <a href="catalog.html?category=shchitki" class="btn-primary">Перейти в раздел</a>
+                                </div>
+                                <div class="slide-image">
+                                    <img src="https://images.unsplash.com/photo-1558402529-d2638a7023e9?w=800" alt="Электрощиток">
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="slide-content">
+                                    <h1>Автоматические выключатели</h1>
+                                    <p>Надежная защита вашей электросети</p>
+                                    <a href="catalog.html?category=avtomaty" class="btn-primary">Смотреть каталог</a>
+                                </div>
+                                <div class="slide-image">
+                                    <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=800" alt="Автоматы">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                        </div>
+                    </section>
+
+                    <!-- Popular Categories -->
+                    <section class="popular-categories">
+                        <h2>Популярные категории</h2>
+                        <div class="categories-grid" id="popularCategories">
+                            <!-- Заполняется через JS -->
+                        </div>
+                    </section>
+
+                    <!-- Featured Products -->
+                    <section class="featured-products">
+                        <h2>Хиты продаж</h2>
+                        <div class="products-grid" id="featuredProducts">
+                            <!-- Заполняется через JS -->
+                        </div>
+                    </section>
+
+                    <!-- Advantages -->
+                    <section class="advantages">
+                        <div class="advantage-item">
+                            <div class="icon">🚚</div>
+                            <h3>Быстрая доставка</h3>
+                            <p>От 1 дня по Москве и области</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="icon">✓</div>
+                            <h3>Гарантия качества</h3>
+                            <p>Только сертифицированная продукция</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="icon">💰</div>
+                            <h3>Лучшие цены</h3>
+                            <p>Прямые поставки от производителей</p>
+                        </div>
+                        <div class="advantage-item">
+                            <div class="icon">📞</div>
+                            <h3>Поддержка 24/7</h3>
+                            <p>Консультации специалистов</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Каталог</h4>
+                    <ul>
+                        <li><a href="catalog.html?category=nku">НКУ</a></li>
+                        <li><a href="catalog.html?category=avtomaty">Автоматические выключатели</a></li>
+                        <li><a href="catalog.html?category=uzo">УЗО</a></li>
+                        <li><a href="catalog.html?category=kontaktory">Контакторы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <ul>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="payment.html">Оплата</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <p>📞 +7 (800) 555-64-94</p>
+                    <p>📞 +7 (495) 783-21-97</p>
+                    <p>✉️ info@inkomos.ru</p>
+                    <p>📍 г. Чехов, Московская обл.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Мы принимаем</h4>
+                    <div class="payment-methods">
+                        <span>💳 Visa</span>
+                        <span>💳 MasterCard</span>
+                        <span>💳 МИР</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Инкомос. Все права защищены.</p>
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="offer.html">Публичная оферта</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
